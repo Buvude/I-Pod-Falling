@@ -6,6 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  m_configObjects: {}
+    path: Assets/Scenes/OpeningScene.unity
+    guid: 739877db34ba25f4294d574c31c03baa
+  - enabled: 1
+    path: Assets/Scenes/David Scene.unity
+    guid: 3fc8acdd13e6c734bafef6554d6fdbcd
+  m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: fe6ea71f3bfb32444a8ac3839c97c6db, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 129b19007b75da0459f1f9a2fc3151db, type: 2}

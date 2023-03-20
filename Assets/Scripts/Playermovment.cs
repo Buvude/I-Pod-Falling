@@ -30,6 +30,15 @@ public class Playermovment : MonoBehaviour
             Player.transform.position = new Vector3(Player.transform.position.x, Input.touches[0].position.y, Player.transform.position.z);*/
         }
     }
+    /*private void OnTriggerEnter2D(Collider2D collision)
+    {
+        print("trigger entered by" + collision.ToString());
+    }*/
 
-    
+    /*private void OnCollisionEnter2D(Collision2D collision)
+    {
+        print("Collisison entered by " + collision.ToString());
+    }*/
+
+
 }
