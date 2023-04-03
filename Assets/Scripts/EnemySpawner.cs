@@ -7,6 +7,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float obstacleSpawnTime;
     [SerializeField] List<GameObject> Obstacles;
     [SerializeField] List<Transform> spawnPoints;
+    [SerializeField] GameObject scoreCounter;
 
     void Start()
     {
@@ -47,5 +48,6 @@ public class EnemySpawner : MonoBehaviour
             cache[3] = Random.Range(0, spawnPoints.Count);
         }
         Instantiate(Obstacles[Random.Range(0, Obstacles.Count)], spawnPoints[cache[3]].position, Quaternion.identity);
+        Instantiate(scoreCounter, spawnPoints[1].position, Quaternion.identity);
     }
 }
