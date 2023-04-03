@@ -13,14 +13,12 @@ public class CameraScaling : MonoBehaviour
         boundCollider = GameObject.FindGameObjectWithTag("Bounds").GetComponent<BoxCollider2D>();
         cam = GetComponent<Camera>();
     }
-    void Start()
+    private void Update()
     {
-
         var (center, size) = CalculateOrthoSize();
 
         cam.transform.position = center;
         cam.orthographicSize = size;
-
     }
     private (Vector3 center, float size) CalculateOrthoSize()
     {

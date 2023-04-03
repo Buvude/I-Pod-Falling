@@ -10,6 +10,7 @@ public class FloatUpAndDown : MonoBehaviour
     public float sinDistance = 1;
     public bool upDown;
     bool started;
+    [SerializeField] float speed;
     Rigidbody2D rb;
     private void Start()
     {
@@ -30,7 +31,7 @@ public class FloatUpAndDown : MonoBehaviour
         } else
         {
             rb.simulated = true;
-            transform.Rotate(transform.forward);
+            transform.Rotate(transform.forward * speed * Time.deltaTime);
         }
 
 

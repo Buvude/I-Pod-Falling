@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
-        transform.Rotate(transform.forward * rotationSpeed);
+        transform.Rotate(transform.forward * rotationSpeed * Time.deltaTime);
 
         if (Input.touchCount > 0)
         {

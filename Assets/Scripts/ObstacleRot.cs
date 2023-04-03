@@ -15,8 +15,8 @@ public class ObstacleRot : MonoBehaviour
     {
         if (rand == 0)
         {
-            transform.Rotate(transform.forward * -rotationSpeed);
-        } else transform.Rotate(transform.forward * rotationSpeed);
+            transform.Rotate(transform.forward * -rotationSpeed * Time.deltaTime);
+        } else transform.Rotate(transform.forward * rotationSpeed * Time.deltaTime);
 
     }
 }
