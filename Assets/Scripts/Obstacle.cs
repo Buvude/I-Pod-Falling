@@ -13,13 +13,9 @@ public class Obstacle : MonoBehaviour
     {
         StartCoroutine(death());
     }
-
-
-
-
     IEnumerator death()
     {
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(9f);
         Destroy(this.gameObject);
     }
 }

@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/StartGame.unity
     guid: b093e3055d5b0a0469f69bfb11cdb88b
   - enabled: 1
-    path: Assets/Scenes/David Scene.unity
+    path: Assets/Scenes/GameplayScene.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   - enabled: 1
     path: Assets/Scenes/DeathScene.unity

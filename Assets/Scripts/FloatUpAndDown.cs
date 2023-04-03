@@ -5,6 +5,7 @@ using UnityEngine;
 public class FloatUpAndDown : MonoBehaviour
 {
     Vector2 initPos;
+    Touch touch;
     public float sinMagnitude;
     public float sinDistance = 1;
     public bool upDown;
@@ -17,6 +18,11 @@ public class FloatUpAndDown : MonoBehaviour
     }
     private void Update()
     {
+        if (Input.touchCount > 0) 
+        {
+            touch = Input.GetTouch(0);
+        }
+        
         if (!started)
         {
             transform.position = new Vector3(upDown ? transform.position.x : ((Mathf.Cos(Time.time * sinMagnitude) * sinDistance) + initPos.x),
@@ -26,11 +32,14 @@ public class FloatUpAndDown : MonoBehaviour
             rb.simulated = true;
             transform.Rotate(transform.forward);
         }
-        
+
 
         if (Input.touchCount >= 1)
         {
-            started = true;
+            if (touch.phase == TouchPhase.Began)
+            {
+                started = true;
+            }
         }
     }
 }
